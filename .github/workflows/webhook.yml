@@ -16,5 +16,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: Print webhook description
-        run: echo "${{ github.event.client_payload.description }}"
+      - name: Print updated Item
+        run: echo "${{ github.event.client_payload.item }}"
+
+      - name: Print updated Vault
+        run: echo "${{ github.event.client_payload.vault }}"
